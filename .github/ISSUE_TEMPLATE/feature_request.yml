@@ -22,4 +22,6 @@ body:
       label: Scope check
       options:
         - label: This does not add a runtime dependency.
+          required: true
         - label: This does not weaken or bypass the ZDR / require_parameters pin.
+          required: true
