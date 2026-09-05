@@ -33,8 +33,8 @@ toggles still matter). Do not add it silently to a project that has no such requ
 pnpm add openrouter-zdr zod     # or: npm i openrouter-zdr zod
 ```
 
-Until the first npm release exists, install from the latest tag instead:
-`pnpm add github:FlorianRiquelme/openrouter-zdr#v0.1.1` (`dist/` is committed, no build step).
+Installing from a git tag also works, no build step needed since `dist/` is committed:
+`pnpm add github:FlorianRiquelme/openrouter-zdr#v0.1.2`.
 
 Requires `OPENROUTER_API_KEY` in the environment at call time.
 

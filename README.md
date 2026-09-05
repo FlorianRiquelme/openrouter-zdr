@@ -44,11 +44,11 @@ pnpm add openrouter-zdr zod
 
 Set `OPENROUTER_API_KEY` in the environment. It is read on every call, never at import time.
 
-Until the first npm release, install straight from a tag. `dist/` is committed so no build
-step runs on install, and CI fails if it drifts from `src/`:
+You can also install straight from a git tag. `dist/` is committed so no build step runs on
+install, and CI fails if it drifts from `src/`:
 
 ```sh
-pnpm add github:FlorianRiquelme/openrouter-zdr#v0.1.1
+pnpm add github:FlorianRiquelme/openrouter-zdr#v0.1.2
 ```
 
 ## Quick start
@@ -203,6 +203,6 @@ development loop, [SECURITY.md](SECURITY.md) for reporting vulnerabilities priva
 ### Releasing
 
 Bump `version`, move the **Unreleased** changelog entries under it, run `pnpm check`, commit,
-tag `vX.Y.Z` and push the tag. The publish workflow uses npm trusted publishing (OIDC, no
-token). Before the first tag, create the package on npm and add this repository as a trusted
-publisher, or run the first `npm publish` by hand.
+tag `vX.Y.Z` and push the tag. The publish workflow publishes to npm with provenance through
+trusted publishing (OIDC, no token), so this repository must stay configured as a trusted
+publisher in the package's npm settings.
