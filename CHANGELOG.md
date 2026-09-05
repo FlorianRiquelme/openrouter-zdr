@@ -6,12 +6,20 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-09-05
+
 ### Added
 
 - Community files: contributing guide, code of conduct, security policy, issue and PR templates.
 - Agent-facing discovery: `llms.txt`, `AGENTS.md`, and an installable `openrouter-zdr` skill
   under `skills/` for coding agents.
 - npm metadata (keywords, homepage, bugs, `sideEffects: false`) for package discovery.
+- Weekly grouped Dependabot updates for npm and GitHub Actions.
+
+### Fixed
+
+- The publish workflow upgrades npm before publishing; Node 22 bundles npm 10, which predates
+  OIDC trusted publishing, so both earlier tag builds failed to publish.
 
 ## [0.1.1] - 2026-09-05
 
@@ -31,6 +39,7 @@ All notable changes to this project are documented here. The format follows
   with `.optional()` round-tripping.
 - `checkModels` and the `openrouter-zdr check-model` CLI.
 
-[Unreleased]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/FlorianRiquelme/openrouter-zdr/releases/tag/v0.1.0
