@@ -11,7 +11,8 @@ All notable changes to this project are documented here. The format follows
 ### Changed
 
 - Security and code-of-conduct reports go to a personal contact address instead of a
-  corporate one. Repository docs only; the published package is unchanged.
+  corporate one. Repository docs only; runtime behavior is unchanged, and the published
+  package differs solely in its version and `CHANGELOG.md`.
 
 ## [0.1.2] - 2026-09-05
 
