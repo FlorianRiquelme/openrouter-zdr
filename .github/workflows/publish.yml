@@ -16,6 +16,9 @@ jobs:
           node-version: 22
           cache: pnpm
           registry-url: https://registry.npmjs.org
+      # Node 22 bundles npm 10, which predates OIDC trusted publishing
+      # (npm >= 11.5.1). Without this the publish 404s for lack of auth.
+      - run: npm install -g npm@latest
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: npm publish --provenance --access public
