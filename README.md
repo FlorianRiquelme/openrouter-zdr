@@ -90,9 +90,18 @@ Exit code 1 if any slug is missing from OpenRouter's ZDR-filtered list.
   as well. This package guarantees the request side; the account guards any code path that
   bypasses it.
 
+## Installing from git
+
+Until the package is on npm, install it straight from a tag. `dist/` is committed so no build
+step runs on install, and CI fails if it drifts from `src/`:
+
+```sh
+pnpm add github:FlorianRiquelme/openrouter-zdr#v0.1.1
+```
+
 ## Releasing
 
-CI runs `pnpm check` on every push. Pushing a `v*` tag runs the publish workflow, which uses npm
+CI runs `pnpm check` on every push, which rebuilds `dist/` and fails when the committed copy is stale, so run `pnpm build` before committing. Pushing a `v*` tag runs the publish workflow, which uses npm
 trusted publishing (OIDC, no token). Before the first tag, create the package on npm and add
 this repository as a trusted publisher in the package settings, or run the first `npm publish`
 by hand.
