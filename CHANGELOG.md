@@ -6,6 +6,13 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-09-05
+
+### Changed
+
+- Bumped dev dependencies: `typescript` 5.9.3 → 7.0.2, `@types/node` 22 → 26,
+  `@biomejs/biome` 2.5.3 → 2.5.11. No runtime or API changes; `dist/` output is unchanged.
+
 ## [0.1.3] - 2026-09-05
 
 ### Changed
@@ -47,7 +54,8 @@ All notable changes to this project are documented here. The format follows
   with `.optional()` round-tripping.
 - `checkModels` and the `openrouter-zdr check-model` CLI.
 
-[Unreleased]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.3...HEAD
+[Unreleased]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.4...HEAD
+[0.1.4]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.3...v0.1.4
 [0.1.3]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.2...v0.1.3
 [0.1.2]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/FlorianRiquelme/openrouter-zdr/compare/v0.1.0...v0.1.1
