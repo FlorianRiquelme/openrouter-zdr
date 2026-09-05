@@ -1,0 +1,50 @@
+{
+	"name": "openrouter-zdr",
+	"version": "0.1.0",
+	"description": "OpenRouter chat client that only ever routes to zero-data-retention endpoints, with per-module model resolution and zod structured output.",
+	"license": "MIT",
+	"author": "Florian Riquelme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FlorianRiquelme/openrouter-zdr.git"
+	},
+	"type": "module",
+	"engines": {
+		"node": ">=22"
+	},
+	"packageManager": "pnpm@11.17.0",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"types": "./dist/index.d.ts",
+	"bin": {
+		"openrouter-zdr": "./dist/cli.js"
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"prepare": "pnpm build",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+	},
+	"peerDependencies": {
+		"zod": "^4.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.3",
+		"@types/node": "^22",
+		"typescript": "^5",
+		"vitest": "^4.1.10",
+		"zod": "^4.5.4"
+	}
+}
