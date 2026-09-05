@@ -9,7 +9,7 @@ Please do not open a public issue. Use one of:
 
 - **GitHub private vulnerability reporting**:
   [Report a vulnerability](https://github.com/FlorianRiquelme/openrouter-zdr/security/advisories/new)
-- **Email**: florian.riquelme@digital-masters.de
+- **Email**: flo@friquelme.dev
 
 Include what you observed, a minimal reproduction if you have one, and the package version.
 You will get an acknowledgement within a few days and a fix or a clear answer as soon as
