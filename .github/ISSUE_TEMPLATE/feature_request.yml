@@ -1,0 +1,25 @@
+name: Feature request
+description: Propose a change to the API, the CLI, or the docs.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can you not do today, or what is harder than it should be?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: The change you have in mind. A code sketch of the API you would like to call helps.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not add a runtime dependency.
+        - label: This does not weaken or bypass the ZDR / require_parameters pin.

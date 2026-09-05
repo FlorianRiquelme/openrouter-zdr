@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/FlorianRiquelme/openrouter-zdr/security/advisories/new
+    about: Please report security issues privately, not as a public issue.
+  - name: Is a model ZDR-capable?
+    url: https://openrouter.ai/models?zdr=true
+    about: Check OpenRouter's ZDR-filtered model list, or run `openrouter-zdr check-model <slug>`.
