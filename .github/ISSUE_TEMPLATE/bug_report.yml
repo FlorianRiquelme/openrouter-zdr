@@ -1,0 +1,42 @@
+name: Bug report
+description: Something does not behave as documented.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Never paste an API key, a full request body, or user data here.
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: "0.1.1"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+      description: Node version and, if relevant, framework (Next.js, Hono, plain Node).
+      placeholder: "Node 22.12, Next.js 16"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Ideally a vitest case with an injected `fetch`, like the tests in `src/`.
+      render: ts
+  - type: textarea
+    id: response
+    attributes:
+      label: Upstream response (if any)
+      description: The status and the excerpt `onUpstreamFailure` received. Redact anything sensitive.
+      render: text

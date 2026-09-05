@@ -2,13 +2,33 @@
 	"name": "openrouter-zdr",
 	"version": "0.1.1",
 	"description": "OpenRouter chat client that only ever routes to zero-data-retention endpoints, with per-module model resolution and zod structured output.",
+	"keywords": [
+		"openrouter",
+		"zdr",
+		"zero-data-retention",
+		"privacy",
+		"gdpr",
+		"llm",
+		"ai",
+		"chat-completions",
+		"structured-output",
+		"zod",
+		"json-schema",
+		"typescript",
+		"esm"
+	],
 	"license": "MIT",
 	"author": "Florian Riquelme",
+	"homepage": "https://github.com/FlorianRiquelme/openrouter-zdr#readme",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/FlorianRiquelme/openrouter-zdr.git"
 	},
+	"bugs": {
+		"url": "https://github.com/FlorianRiquelme/openrouter-zdr/issues"
+	},
 	"type": "module",
+	"sideEffects": false,
 	"engines": {
 		"node": ">=22"
 	},
@@ -26,8 +46,13 @@
 	"files": [
 		"dist",
 		"README.md",
+		"CHANGELOG.md",
 		"LICENSE"
 	],
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
 	"scripts": {
 		"build": "tsc -p tsconfig.build.json",
 		"lint": "biome check .",
